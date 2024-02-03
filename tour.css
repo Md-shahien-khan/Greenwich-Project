@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.tour-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  text-align: center;
+}
+
+#current-image {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+
+
+.fade-out {
+  opacity: 0; /* Set opacity to 0 for the fade-out effect */
+}
+
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px; /* Increase the margin for more space */
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Increase the gap for more space between buttons */
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  border: 2px solid #333;
+  background-color: #fff;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+button i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.button-row.horizontal {
+  flex-direction: row;
+}
+
+
+/* Default styles for larger screens (desktop) */
+.tour-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.button-row.horizontal {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  #current-image {
+    max-width: 60%; /* Adjust this value for your desired image width */
+  }
+}
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 600px) {
+  .tour-container {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .button-row.horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
